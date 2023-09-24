@@ -1,0 +1,58 @@
+body {
+    background-image: url('Assets/bgpic.png');
+    background-size:1000px;
+    background-repeat: no-repeat;
+    background-position: right top 50px;
+
+  }
+  .inst {
+    position: fixed;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #pitch-control {
+    width: 100%;
+  }
+  .title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 250px; position: fixed;
+    top: 0;
+   font-style: italic;
+             
+  }
+.button-grid {
+    position: fixed;
+    top: 500px;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border-radius: 34px;
+    background: #e0e0e0;
+    box-shadow:  10px 10px 30px #bebebe,
+             -10px -10px 30px #ffffff;
+    animation: neon 1s ease-in-out infinite;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  button:active {
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    
+  }
+  
+
+  
+  @keyframes neon {
+    from {
+      box-shadow: 0 0 10px rgba(0, 255, 30, 0.8);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 78, 217, 0.41);
+    }
+  }

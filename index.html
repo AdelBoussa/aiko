@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, intitial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title> Aiko </title>
+</head>
+<body>
+    <h1 class="title">Aiko (愛子)</h1>
+    <audio src="uta/あ.wav"></audio>
+    <div class="button-grid">
+        <button class="button" id="1" data-sound="uta\あ.wav">あ</button>
+        <button class="button" id ="2" data-sound="uta\い.wav">い</button>
+        <button class="button" id="3" data-sound="uta\いぇ.wav">いぇ</button>
+        <button class="button" id="4" data-sound="uta\う.wav">う</button>
+        <button class="button" id="5" data-sound="uta\うぃ.wav">うぃ</button>
+        <button class="button" id="6" data-sound="uta\え.wav" >え</button>
+        <button class="button" id="7" data-sound="uta\お.wav">お</button>
+        <button class="button" id="8" data-sound="uta\キ゜.wav">キ゜</button>
+        <button class="button" id="9" data-sound="uta\きゅ.wav">きゅ</button>
+        <button class="button" id="10" data-sound="uta\コ゜.wav">コ゜</button>
+        <button class="button" id="11" data-sound="uta\ん.wav">ん</button>
+        <button class="button" id="12" data-sound="uta\ま.wav">ま</button>
+        
+      </div>
+<div class="inst" id="midi-messages"></div>
+<!-- <h4 class="inst">play midi note</h4> -->
+<script>
+const buttons = document.querySelectorAll('.button');
+
+
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    // create an audio element with the sound specified in the data-sound attribute
+    const audio = new Audio(button.dataset.sound);
+/*
+    // listen for MIDI messages
+    navigator.requestMIDIAccess().then(midi => {
+      midi.inputs.forEach(input => {
+        input.onmidimessage = event => {
+          // get the pitch value from the MIDI message
+          const pitch = event.data[1];
+          // set the pitch of the audio based on the pitch value
+          audio.playbackRate = pitch / 60;
+                  // update the text content of the midi-messages element with the MIDI message
+                  midiMessages.textContent = `Received MIDI message: ${event.data}`;
+        };
+      });
+    });
+*/
+    audio.play();
+  });
+});
+/*
+function playSound(key) {
+  switch (key) {
+    case "a":
+      const sound1 = new Audio("uta\あ.wav");
+      sound1.play();
+      break;
+    case "s":
+    const sound2 = new Audio("uta\い.wav");
+      sound2.play();
+      break;
+    case "d":
+    const sound3 = new Audio("uta\いぇ.wav");
+      sound3.play();
+      break;
+    case "f":
+    const sound4 = new Audio("uta\う.wav");
+      sound4.play();
+      break;
+    case "g":
+    const sound5 = new Audio("uta\うぃ.wav");
+      sound5.play();
+      break;
+    case "h":
+    const sound6 = new Audio("uta\え.wav");
+      sound6.play();
+      break;
+    case "j":
+    const sound7 = new Audio("uta\お.wav");
+      sound7.play();
+      break;
+    case "k":
+    const sound8 = new Audio("uta\キ゜.wav");
+      sound8.play();
+      break;
+    case "l":
+    const sound9 = new Audio("uta\きゅ.wav");
+      sound9.play();
+      break;
+    case ";":
+    const sound10 = new Audio("uta\コ゜.wav");
+      sound10.play();
+      break;
+    case "'":
+    const sound11 = new Audio("uta\ん.wav");
+      sound11.play();
+      break;
+      case "]":
+      const sound12 = new Audio("uta\ま.wav");
+      sound12.play();
+      break;
+    default:
+      console.log("Invalid key");
+  }
+}*/
+
+document.addEventListener('keypress', (event) => {
+  var key = event.key; // get the key that was pressed
+   // play the sound corresponding to the key
+   const button = document.getElementById("1");
+   switch (key) {
+    case "a":
+       // Find the button element
+    const button = document.getElementById("1");
+    // Trigger a click event on the button
+    button.click();
+  
+      break;
+    case "s":
+     const button2 = document.getElementById("2");
+    button.click();
+      break;
+    case "d":
+    const button3 = document.getElementById("3");
+    button.click();
+      break;
+    case "f":
+    const button4 = document.getElementById("4");
+    button.click();
+      break;
+    case "g":
+    const button5 = document.getElementById("5");
+    button.click();
+      break;
+    case "h":
+    const button6 = document.getElementById("6");
+    button.click();
+      break;
+    case "j":
+    const button7 = document.getElementById("7");
+    button.click();
+      break;
+    case "k":
+    const button8 = document.getElementById("8");
+    button.click();
+      break;
+    case "l":
+    const button9 = document.getElementById("9");
+    button.click();
+      break;
+    case ";":
+    const button10 = document.getElementById("10");
+    button.click();
+      break;
+    case "'":
+    const button11 = document.getElementById("11");
+    button.click();
+      break;
+      case "]":
+  const button12 = document.getElementById("12");
+    button.click();
+      break;
+    default:
+      alert("Invalid key");
+  }
+  //alert(`Key pressed ${key}`);
+}, false);
+
+
+
+</script>
+
+</body>
+
+</html>
