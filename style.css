@@ -3,7 +3,8 @@ body {
     background-size:1000px;
     background-repeat: no-repeat;
     background-position: right top 50px;
-
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   .inst {
     position: fixed;
@@ -21,7 +22,7 @@ body {
              
   }
 .button-grid {
-    position: fixed;
+    position: relative;
     top: 500px;
     left: 20%;
     right: 0;
